@@ -1,0 +1,116 @@
+:root {
+  --blanco: #ffffff;
+  --oscuro: #212121;
+  --primario: #080808;
+  --segundario: #0097a7;
+  --verde: #2f7f74;
+  --fuente: 3.8rem;
+  --grisClaro: #6c6d6e;
+}
+/*principales*/
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+:before,
+:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 16px;
+  font-family: "Krub", sans-serif;
+  background-image: linear-gradient(
+    to top,
+    var(--grisClaro) 0%,
+    var(--blanco) 100%
+  );
+}
+.form-container {
+  background-color: #006782;
+  color: white;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.formulario fieldset {
+  border: none;
+}
+.formulario legend {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--primario);
+}
+.campo {
+  margin-bottom: 1rem;
+}
+.campo label {
+  color: var(--blanco);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: block;
+}
+.inputTex {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  margin-left: -1rem;
+}
+.campo textarea {
+  height: 20rem;
+}
+.informacion {
+  display: flex;
+  align-items: center;
+  padding: 35px;
+  justify-content: center;
+  gap: 10px;
+  background-color: #fff;
+}
+.informacion p {
+  margin-top: 15px;
+}
+
+.image {
+  display: flexbox;
+  width: 400px;
+  margin: 25px;
+}
+.conversion-container {
+  margin: 5px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+}
+.form-container input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.link {
+  color: #4caf50;
+  font-weight: bold; /* Negrita */
+  text-decoration: underline; /* Subrayado */
+}

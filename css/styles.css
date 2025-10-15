@@ -1,0 +1,294 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: white;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  background: #006782;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 5px 10%;
+  border: 2px solid white;
+  border-radius: 100px;
+  margin: 10px;
+  max-width: 100%;
+}
+
+.icono {
+  width: 250px;
+  height: auto;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.navmenu ul {
+  display: flex;
+  padding: 0;
+}
+
+.navmenu ul li {
+  margin: 0 15px;
+}
+
+.navmenu ul li a {
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: block;
+  font-size: 20px;
+}
+
+.navmenu ul li a.active,
+.navmenu ul li a:hover {
+  background: #388e3c;
+  border-radius: 5px;
+}
+
+.dropdown ul {
+  display: none;
+  position: absolute;
+  background: #388e3c;
+  padding: 2px;
+  margin-top: 2px;
+  border-radius: 5px;
+}
+
+.dropdown:hover ul {
+  display: block;
+}
+
+.dropdown ul li {
+  margin: 0;
+}
+
+.dropdown ul li a {
+  color: white;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.hero {
+  background: #024e61;
+  color: #ffffff;
+  padding: 100px 0;
+  text-align: center;
+  border: 2px solid;
+  border-radius: 30px;
+  margin: 5px;
+}
+
+.hero h1 {
+  font-size: 60px;
+}
+
+.hero .accent {
+  color: #4caf50;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.button {
+  --color: #ffffff;
+  padding: 0.8em 1.7em;
+  background-color: #4caf50;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+
+.button::before {
+  top: -1em;
+  left: -1em;
+}
+
+.button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.button:hover::before,
+.button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.button:hover {
+  color: #008374;
+}
+
+.button:active {
+  filter: brightness(0.8);
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 100px;
+}
+
+.cards .red,
+.cards .blue,
+.cards .green {
+  background-color: #024e61;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 230px;
+  width: 480px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
+  font-size: 25px;
+}
+
+.cards .card img.card-image {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card p.second-text {
+  font-size: 0.7em;
+}
+
+.cards .card:hover {
+  transform: scale(1.05, 1.1);
+}
+
+.footer {
+  background: #006782;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  margin-top: auto;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 5px 0;
+}
+
+.menu {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.footer {
+  background: #006782;
+  min-height: 100px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  width: auto;
+  height: auto;
+  margin-top: auto;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer ul li {
+  margin: 0 10px;
+  font-size: 1rem;
+  position: relative;
+}
+
+.footer p {
+  margin-top: 10px;
+}
+.link {
+  color: #4caf50;
+  font-weight: bold; /* Negrita */
+  text-decoration: underline; /* Subrayado */
+}

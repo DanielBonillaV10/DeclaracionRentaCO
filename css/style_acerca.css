@@ -1,0 +1,17 @@
+.parrafo {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.parrafo p {
+  font-size: 22px;
+  margin-inline: 40px;
+}
+.link {
+  color: #4caf50;
+  font-weight: bold; /* Negrita */
+  text-decoration: underline; /* Subrayado */
+}

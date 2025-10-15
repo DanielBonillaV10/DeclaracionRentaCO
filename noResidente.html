@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style_residente.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>DeclaRenta</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img href="index.html" src="image/logo.png" alt="icono" class="icono" />
+      </div>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="acerca.html">Acerca</a></li>
+          <li class="dropdown">
+            <a href="#" class="active"
+              >Calculadora <i class="bi bi-chevron-down"></i
+            ></a>
+            <ul>
+              <li><a href="Residente.html">Residente en colombia</a></li>
+              <li><a href="noResidente.html">No residentes en Colombia</a></li>
+              <li><a href="sucesionLiquida.html">Sucesiones líquidas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="apartado">
+      <div class="text">
+        <h1>No Residentes en Colombia para Efectos Tributarios</h1>
+        <p>
+          Se consideran residentes en Colombia para efectos tributarios las
+          personas naturales que cumplan con cualquiera de las siguientes
+          condiciones:
+        </p>
+        <ol>
+          <li>
+            Personas que han permanecido en Colombia, ya sea de manera continua
+            o discontinua, durante 183 días en un período determinado de 365
+            días. Si los 365 días del periodo cubren más de un año fiscal, la
+            persona será considerada como contribuyente para el segundo año.
+          </li>
+          <li>
+            Personas que estén inscritas en el servicio diplomático colombiano o
+            estén relacionadas con personas que se encuentren inscritas en el
+            servicio diplomático colombiano, y que, en virtud de la Convención
+            de Viena sobre Relaciones Diplomáticas, estén exentas, total o
+            parcialmente, de impuestos sobre rentas y plusvalías en el país
+            donde han sido designados durante el año fiscal correspondiente.
+          </li>
+          <li>
+            Personas que tengan la nacionalidad colombiana y cumplan con uno o
+            más de los siguientes rasgos en el ejercicio fiscal correspondiente:
+            <ul>
+              <li>
+                La pareja de la persona o los hijos menores de edad de la
+                persona se consideraron como residentes fiscales en el ejercicio
+                fiscal correspondiente.
+              </li>
+              <li>
+                El cincuenta por ciento (50%) o más de los ingresos de la
+                persona se consideró como ingresos de origen colombiano.
+              </li>
+              <li>
+                El cincuenta por ciento (50%) o más de los activos del individuo
+                se administraron en Colombia.
+              </li>
+              <li>
+                Se consideró que el cincuenta por ciento (50%) o más de los
+                activos de la persona estaba en posesión en Colombia.
+              </li>
+              <li>
+                Haber sido requerido por la administración tributaria para
+                probar que el individuo es un residente fiscal en un país
+                diferente, el individuo no proporciona evidencia en este
+                respecto.
+              </li>
+              <li>
+                La persona física es residente fiscal de una jurisdicción
+                considerada por el gobierno colombiano como paraíso fiscal.
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <img
+        src="image/no_residente.jpg"
+        alt="Imagen de Residentes en Colombia"
+        class="image"
+      />
+    </div>
+
+    <div class="form-container">
+      <h1>Registro de Datos</h1>
+      <form id="datosFormulario" action="/submit" method="post">
+        <div class="input-wrapper">
+          <label for="bienes_inmuebles"
+            >Ingrese el valor de los bienes inmuebles en Colombia:
+          </label>
+          <div class="input-container">
+            <input
+              type="number"
+              name="bienes_inmuebles"
+              id="bienes_inmuebles"
+              placeholder="COP"
+              required
+            />
+            <div id="bienes_inmuebles_conversion" class="conversion-box"></div>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="inversiones_financieras"
+            >Ingrese el valor de las inversiones financieras en Colombia:
+          </label>
+          <div class="input-container">
+            <input
+              type="number"
+              name="inversiones_financieras"
+              id="inversiones_financieras"
+              placeholder="COP"
+              required
+            />
+            <div
+              id="inversiones_financieras_conversion"
+              class="conversion-box"
+            ></div>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="ingresos_generados"
+            >Ingrese el valor de los ingresos generados en Colombia:
+          </label>
+          <div class="input-container">
+            <input
+              type="number"
+              name="ingresos_generados"
+              id="ingresos_generados"
+              placeholder="COP"
+              required
+            />
+            <div
+              id="ingresos_generados_conversion"
+              class="conversion-box"
+            ></div>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="participacion_establecimientos"
+            >Ingrese el valor de sus participaciones en establecimientos en
+            Colombia:
+          </label>
+          <div class="input-container">
+            <input
+              type="number"
+              name="participacion_establecimientos"
+              id="participacion_establecimientos"
+              placeholder="COP"
+              required
+            />
+            <div
+              id="participacion_establecimientos_conversion"
+              class="conversion-box"
+            ></div>
+          </div>
+        </div>
+
+        <button type="submit">Verificar</button>
+      </form>
+      <div id="resultado"></div>
+    </div>
+    <script src="js/js_noresidente.js"></script>
+
+    <footer class="footer">
+      <ul class="menu">
+        <li>Mariana Niño</li>
+        <li>Maira Rangel</li>
+        <li>Cesar Saenz</li>
+        <li>Daniel Bonilla</li>
+        <li>Jehison Forero</li>
+      </ul>
+      <p>DeclaRenta - Ingeniería Del Software II</p>
+      <a
+        href="https://micrositios.dian.gov.co/renta-personas-naturales-ag-2022/"
+        class="link"
+        >Redirigirse a la pagina de la DIAN</a
+      >
+    </footer>
+  </body>
+</html>

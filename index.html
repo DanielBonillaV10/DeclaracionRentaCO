@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeclaRenta</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img href="index.html" src="image/logo.png" alt="icono" class="icono" />
+      </div>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="acerca.html">Acerca</a></li>
+          <li class="dropdown">
+            <a href="#">Calculadora <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="Residente.html">Residente en colombia</a></li>
+              <li><a href="noResidente.html">No residentes en Colombia</a></li>
+              <li><a href="sucesionLiquida.html">Sucesiones líquidas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div
+        class="hero"
+        style="background-image: url(image/fondo.pn); width: 100; height: 100"
+      >
+        <div class="container d-flex flex-column">
+          <div class="row">
+            <div class="col-1 lg-6 flex-column">
+              <h1>
+                <span>Bienvenido a </span><span class="accent">DeclaRenta</span>
+              </h1>
+              <p>
+                Verifica si Debes Declarar Renta como Persona Natural: Consulta
+                Fácil y Rápida para Residentes y No Residentes en Colombia
+              </p>
+              <div class="">
+                <a href="#services">
+                  <button class="button">Iniciar</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="services" class="services section">
+        <div class="container">
+          <div class="cards">
+            <a href="Residente.html" class="card-link">
+              <div class="card red">
+                <img
+                  src="image/ubicacion.png"
+                  alt="Imagen 1"
+                  class="card-image"
+                />
+                <p class="tip">Residentes en Colombia</p>
+              </div>
+            </a>
+
+            <a href="noResidente.html" class="card-link">
+              <div class="card blue">
+                <img src="image/avion.png" alt="Imagen 2" class="card-image" />
+                <p class="tip">No residentes en Colombia</p>
+              </div>
+            </a>
+
+            <a href="sucesionLiquida.html" class="card-link">
+              <div class="card green">
+                <img src="image/cruz.png" alt="Imagen 3" class="card-image" />
+                <p class="tip">Sucesiones líquidas</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="menu">
+        <li>Mariana Niño</li>
+        <li>Maira Rangel</li>
+        <li>Cesar Saenz</li>
+        <li>Daniel Bonilla</li>
+        <li>Jehison Forero</li>
+      </ul>
+      <p>DeclaRenta - Ingeniería Del Software II</p>
+      <a
+        href="https://micrositios.dian.gov.co/renta-personas-naturales-ag-2022/"
+        class="link"
+        >Redirigirse a la pagina de la DIAN</a
+      >
+    </footer>
+  </body>
+</html>

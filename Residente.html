@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/style_residente.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>DeclaRenta</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img href="index.html" src="image/logo.png" alt="icono" class="icono" />
+      </div>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="acerca.html">Acerca</a></li>
+          <li class="dropdown">
+            <a href="#" class="active"
+              >Calculadora <i class="bi bi-chevron-down"></i
+            ></a>
+            <ul>
+              <li><a href="Residente.html">Residente en colombia</a></li>
+              <li><a href="noResidente.html">No residentes en Colombia</a></li>
+              <li><a href="sucesionLiquida.html">Sucesiones líquidas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="apartado">
+      <div class="text">
+        <h1>Residentes en Colombia para Efectos Tributarios</h1>
+        <p>
+          Se consideran residentes en Colombia para efectos tributarios las
+          personas naturales que cumplan con cualquiera de las siguientes
+          condiciones:
+        </p>
+        <ol>
+          <li>
+            Permanecer continua o discontinuamente en el país por más de 183
+            días calendario, incluyendo días de entrada y salida del país,
+            durante un periodo cualquiera de 365 días calendario consecutivos,
+            en el entendido de que cuando la permanencia continua o discontinua
+            en el país recaiga sobre más de un año o periodo gravable se
+            considerará que la persona es residente a partir del segundo año o
+            periodo gravable.
+          </li>
+          <li>
+            Encontrarse exentos de tributación en el país en el que se
+            encuentran en misión respecto de toda o parte de sus rentas y
+            ganancias ocasionales durante el respectivo año o periodo gravable,
+            debido a una relación con el servicio exterior del Estado colombiano
+            o con personas que se encuentran en el servicio exterior del Estado
+            colombiano, y en virtud de las convenciones de Viena sobre
+            relaciones diplomáticas y consulares.
+          </li>
+          <li>
+            Ser nacionales y que durante el respectivo año o periodo gravable:
+            <ul>
+              <li>
+                ° Su cónyuge o compañero permanente no separado legalmente o los
+                hijos dependientes menores de edad tienen residencia fiscal en
+                el país. El 50% o más de sus ingresos son de fuente nacional.
+              </li>
+              <li>
+                ° El 50% o más de sus bienes son administrados en el país.
+              </li>
+              <li>
+                ° El 50% o más de sus activos se entienden poseídos en el país.
+              </li>
+              <li>
+                ° Habiendo sido requeridos por la Administración Tributaria para
+                ello, no acreditan su condición de residentes en el exterior
+                para efectos tributarios.
+              </li>
+              <li>
+                ° Tienen residencia fiscal en una jurisdicción calificada por el
+                Gobierno Nacional como paraíso fiscal.
+              </li>
+            </ul>
+            <ul>
+              <li>
+                Las personas naturales nacionales que de acuerdo con las
+                disposiciones de este artículo acrediten su condición de
+                residentes en el exterior para efectos tributarios deberán
+                hacerlo ante la DIAN, mediante un certificado de residencia
+                fiscal o un documento que haga sus veces, expedido por el país o
+                jurisdicción de la que se hayan convertido en residentes.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Las personas naturales nacionales que de acuerdo con las
+            disposiciones de este artículo acrediten su condición de residentes
+            en el exterior para efectos tributarios deberán hacerlo ante la
+            DIAN, mediante un certificado de residencia fiscal o un documento
+            que haga sus veces, expedido por el país o jurisdicción de la que se
+            hayan convertido en residentes.
+          </li>
+
+          No serán residentes fiscales los nacionales que cumplan con alguno de
+          los literales del numeral 3, pero que reúnan una de las siguientes
+          condiciones:
+          <ul>
+            ° Que el 50% o más de sus ingresos anuales tengan su fuente en la
+            jurisdicción en la cual tengan su domicilio.
+          </ul>
+          <ul>
+            ° Que el 50% o más de sus activos se encuentren localizados en la
+            jurisdicción en la cual tengan su domicilio.
+          </ul>
+        </ol>
+      </div>
+      <img
+        src="image/residentes.jpeg"
+        alt="Imagen de Residentes en Colombia"
+        class="image"
+      />
+    </div>
+
+    <div class="form-container">
+      <h1>Registro de datos financieros</h1>
+      <form id="datosFormulario" action="/submit" method="post">
+        <div class="input-wrapper">
+          <label for="patrimonio_bruto"
+            >Patrimonio Bruto al 31 de Diciembre de 2023:</label
+          >
+          <div class="input-container">
+            <input
+              type="number"
+              name="patrimonio_bruto"
+              id="patrimonio_bruto"
+              placeholder="COP"
+              required
+            />
+            <div id="patrimonio_bruto_conversion" class="conversion-box"></div>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="ingresos_brutos">Ingresos Brutos Anuales 2023:</label>
+          <div class="input-container">
+            <input
+              type="number"
+              name="ingresos_brutos"
+              id="ingresos_brutos"
+              placeholder="COP"
+              required
+            />
+            <div id="ingresos_brutos_conversion" class="conversion-box"></div>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="consumos_tarjeta">Consumos con Tarjeta de Crédito:</label>
+          <div class="input-container">
+            <input
+              type="number"
+              name="consumos_tarjeta"
+              id="consumos_tarjeta"
+              placeholder="COP"
+              required
+            />
+            <div id="consumos_tarjeta_conversion" class="conversion-box"></div>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="compras_consumos_totales"
+            >Valor de Compras y Consumos Totales:</label
+          >
+          <div class="input-container">
+            <input
+              type="number"
+              name="compras_consumos_totales"
+              id="compras_consumos_totales"
+              placeholder="COP"
+              required
+            />
+            <div
+              id="compras_consumos_totales_conversion"
+              class="conversion-box"
+            ></div>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="consignaciones_bancarias"
+            >Valor de Consignaciones Bancarias:</label
+          >
+          <div class="input-container">
+            <input
+              type="number"
+              name="consignaciones_bancarias"
+              id="consignaciones_bancarias"
+              placeholder="COP"
+              required
+            />
+            <div
+              id="consignaciones_bancarias_conversion"
+              class="conversion-box"
+            ></div>
+          </div>
+        </div>
+
+        <button type="submit">Verificar</button>
+      </form>
+      <div id="resultado"></div>
+    </div>
+
+    <script src="js/residente.js"></script>
+
+    <footer class="footer">
+      <ul class="menu">
+        <li>Mariana Niño</li>
+        <li>Maira Rangel</li>
+        <li>Cesar Saenz</li>
+        <li>Daniel Bonilla</li>
+        <li>Jehison Forero</li>
+      </ul>
+      <p>DeclaRenta - Ingeniería Del Software II</p>
+      <a
+        href="https://micrositios.dian.gov.co/renta-personas-naturales-ag-2022/"
+        class="link"
+        >Redirigirse a la pagina de la DIAN</a
+      >
+    </footer>
+  </body>
+</html>

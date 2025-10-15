@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/style_residente.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>DeclaRenta</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img href="index.html" src="image/logo.png" alt="icono" class="icono" />
+      </div>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="acerca.html">Acerca</a></li>
+          <li class="dropdown">
+            <a href="#" class="active"
+              >Calculadora <i class="bi bi-chevron-down"></i
+            ></a>
+            <ul>
+              <li><a href="Residente.html">Residente en colombia</a></li>
+              <li><a href="noResidente.html">No residentes en Colombia</a></li>
+              <li><a href="sucesionLiquida.html">Sucesiones líquidas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="apartado">
+      <div class="text">
+        <h2>Sucesiones Líquidas en Colombia</h2>
+        <p>
+          Se consideran sucesiones líquidas en Colombia aquellas que cumplen con
+          cualquiera de las siguientes características:
+        </p>
+        <ol>
+          <li>
+            <strong>Proceso de Partición y Adjudicación:</strong> Una sucesión
+            se considera líquida cuando los bienes del causante han sido
+            completamente adjudicados a los herederos o legatarios, y se han
+            cancelado todas las deudas y obligaciones pendientes del causante.
+            En este estado, la sucesión deja de existir como ente jurídico
+            independiente.
+          </li>
+          <li>
+            <strong>Obligación Tributaria:</strong> Las sucesiones líquidas
+            están sujetas al cumplimiento de obligaciones fiscales en Colombia.
+            Los herederos o legatarios deben declarar y pagar los impuestos
+            correspondientes, como el impuesto de ganancia ocasional, por los
+            bienes y derechos que les han sido adjudicados.
+          </li>
+          <li>
+            <strong>Determinación del Valor Patrimonial:</strong> En el proceso
+            de liquidación de la sucesión, se debe establecer el valor
+            patrimonial de los bienes adjudicados, el cual será la base para
+            calcular los impuestos a cargo de los beneficiarios.
+          </li>
+          <li>
+            <strong>Sucesión en Proceso de Liquidación:</strong> Aunque la
+            sucesión aún no esté completamente liquidada, se considera que
+            existe una sucesión líquida cuando se han identificado los activos y
+            pasivos, y se está en proceso de adjudicar los bienes a los
+            herederos o legatarios, habiendo una claridad sobre el destino final
+            de los mismos.
+          </li>
+          <li>
+            <strong>Jurisdicción Fiscal:</strong> Los bienes que hacen parte de
+            una sucesión líquida en Colombia están sujetos a las leyes fiscales
+            colombianas, independientemente de la nacionalidad o residencia de
+            los herederos, si dichos bienes se encuentran en territorio
+            colombiano.
+          </li>
+          <li>
+            <strong>Sucesión Intestada o Testada:</strong> Tanto en sucesiones
+            intestadas (sin testamento) como testadas (con testamento), la
+            sucesión se considera líquida una vez se ha cumplido con el proceso
+            legal de adjudicación, de acuerdo con lo estipulado por la ley o por
+            el testamento del causante.
+          </li>
+        </ol>
+      </div>
+      <img
+        src="image/sucesiones.png"
+        alt="Imagen de Sucesiones Líquidas en Colombia"
+        class="image"
+      />
+    </div>
+
+    <div class="form-container">
+      <h1>Registro de datos financieros</h1>
+      <form id="datosFormulario" action="/submit" method="post">
+        <div class="input-wrapper">
+          <label for="bienes_inmuebles"
+            >Valor total de los bienes inmuebles que el causante poseía en
+            Colombia:</label
+          >
+          <div class="input-container">
+            <input
+              type="number"
+              name="bienes_inmuebles"
+              id="bienes_inmuebles"
+              placeholder="COP"
+              required
+            />
+            <div id="bienes_inmuebles_conversion" class="conversion-box"></div>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="inversiones_financieras"
+            >valor total de las inversiones financieras en Colombia:</label
+          >
+          <div class="input-container">
+            <input
+              type="number"
+              name="inversiones_financieras"
+              id="inversiones_financieras"
+              placeholder="COP"
+              required
+            />
+            <div
+              id="inversiones_financieras_conversion"
+              class="conversion-box"
+            ></div>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="bienes_inversiones"
+            >Monto anual de los ingresos generados por bienes e inversiones en
+            Colombia:</label
+          >
+          <div class="input-container">
+            <input
+              type="number"
+              name="bienes_inversiones"
+              id="bienes_inversiones"
+              placeholder="COP"
+              required
+            />
+            <div
+              id="bienes_inversiones_conversion"
+              class="conversion-box"
+            ></div>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="compras_consumos_totales"
+            >Ganancias ocasionales generadas por la venta de bienes o activos en
+            Colombia después del fallecimiento del causante:</label
+          >
+          <div class="input-container">
+            <input
+              type="number"
+              name="compras_consumos_totales"
+              id="compras_consumos_totales"
+              placeholder="COP"
+              required
+            />
+            <div
+              id="compras_consumos_totales_conversion"
+              class="conversion-box"
+            ></div>
+          </div>
+        </div>
+
+        <button type="submit">Verificar</button>
+      </form>
+      <div id="resultado"></div>
+    </div>
+
+    <script src="js/sucesion_liquida.js"></script>
+
+    <footer class="footer">
+      <ul class="menu">
+        <li>Mariana Niño</li>
+        <li>Maira Rangel</li>
+        <li>Cesar Saenz</li>
+        <li>Daniel Bonilla</li>
+        <li>Jehison Forero</li>
+      </ul>
+      <p>DeclaRenta - Ingeniería Del Software II</p>
+      <a
+        href="https://micrositios.dian.gov.co/renta-personas-naturales-ag-2022/"
+        class="link"
+        >Redirigirse a la pagina de la DIAN</a
+      >
+    </footer>
+  </body>
+</html>
